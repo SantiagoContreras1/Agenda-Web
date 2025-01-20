@@ -3,8 +3,9 @@ a {
   text-decoration: none;
 }
 body {
-  background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
-  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(bottom, rgb(17, 81, 172), rgb(25, 117, 249));
+  height: 100%;
+  background-repeat:no-repeat;
 }
 label {
   font-family: "Raleway", sans-serif;
@@ -43,10 +44,10 @@ label {
   text-align: center;
 }
 #submit-btn {
-  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
   border: none;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px #24c64f;
+  box-shadow: 0px 1px 8px rgb(17, 81, 172);
   cursor: pointer;
   color: white;
   font-family: "Raleway SemiBold", sans-serif;
@@ -57,7 +58,7 @@ label {
   width: 153px;
 }
 #submit-btn:hover {
-  box-shadow: 0px 1px 18px #24c64f;
+  box-shadow: 0px 1px 18px rgb(17, 81, 172);
 }
 .form {
   align-items: left;
@@ -65,7 +66,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
   height: 1px;
   width: 100%;
 }
@@ -76,7 +77,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
   height: 2px;
   margin: -0.5rem auto 0 auto;
   width: 89px;

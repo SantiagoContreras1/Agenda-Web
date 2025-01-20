@@ -2,12 +2,16 @@ body {
   /*SE HIZO ESTO PORQUE Bootstrap SOBREESCRIBIA EL STYLE DEL BODY*/
   min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
   width: 100%; /* Asegura que el ancho sea del 100% */
-  background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b) !important;
+  height: 100%;
+  background: -webkit-linear-gradient(bottom, rgb(17, 81, 172), rgb(25, 117, 249)) !important;
   background-repeat: no-repeat !important;
 }
 
+
 .TheDiv {
   border-radius: 25px;
+  display: block;
+  overflow: hidden;
   border: none;
   background: rgb(255, 255, 255);
   padding: 20px;
@@ -20,17 +24,47 @@ body {
 }
 
 .divTitle {
-    color: #2dbd6e;
-    font-family: "Raleway", sans-serif;
-    font-size: 25pt;
-    margin-top: 30px;
+    color: rgb(17, 81, 172);
+    font-family: "Raleway", sans-serif !important;
+    font-size: 25pt !important;
+    margin-top: 30px !important;
     text-align: left;
     position: relative;
 }
 
 .underline-title {
-    background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+    background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
     height: 5px;
-    width: 1200px; /* Longitud de la línea */
-  }
+    width: 450px; /* Longitud de la línea */
+}
 
+.line-contact {
+  background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
+  margin-top: 35px;
+  height: 250px;
+  width: 5px; /* Longitud de la línea */
+}
+
+.underline-contact{
+  background: -webkit-linear-gradient(right, rgb(25, 117, 249), rgb(17, 81, 172));
+  margin-top: 50px;
+  height: 5px;
+  width: 1160px; /* Longitud de la línea */
+}
+
+img{
+  border-radius: 50%;
+  width: 170px;
+  margin-top: 35px;
+  margin-right: 50px;
+}
+
+.porfile-container{
+  display:flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+button{
+  width: 180px;
+}
