@@ -28,7 +28,7 @@
           </div>
           <form method="post" class="form">
             <label for="user-email" style="padding-top:13px">
-                &nbsp;Email
+                &nbsp;Nombre de Usuario
               </label>
             <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
             <div class="form-border"></div>
@@ -36,18 +36,18 @@
               </label>
             <input id="user-password" class="form-content" type="password" name="password" required />
             <div class="form-border"></div>
-            <a href="#">
-              <legend id="forgot-pass">¿Olvidó su contraseña?</legend>
-            </a>
-            <input id="submit-btn" type="button" value="INGRESAR" onclick="redirigir()" />
+            <input id="submit-btn" type="button" value="INGRESAR" onclick="userAndRwedirect()" />
             <script>
-                function redirigir(){
-                    window.location.href = "/menuPrincipal.html"; // Redirige al menú porque el Form no es funcional.
+                function userAndRwedirect(){
+                  
+                  const username = document.getElementById('user-email').value
+                  localStorage.setItem('username',username)
+
+                  window.location.href = "/menuPrincipal.html"; // Redirige al menú porque el Form no es funcional.
+
+
                 }
             </script>
-
-
-
           </form>
         </div>
       </div>
