@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles</title>
 
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="style/detailsContact.css"/>
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -20,13 +20,53 @@
     <!-- Icono de pagina -->
 </head>
 <body>
+
+  <script>
+    const contactName = localStorage.getItem('contactName')
+
+    const save = ()=>{
+      window.location.href = '/menuPrincipal.html'
+    }
+
+    if (contactName) {
+      document.body.innerHTML=`
+      
+        <div class="the-div">
+
+          <div class="row">
+            <h1><b>Información</b></h1>
+          </div>
+
+          <div class="contacts-card">
+            <div class="card">
+              <img src="images/img_avatar.png" alt="Ceferino" style="width:100%" />
+              <div class="row"><h1><b>${contactName}</b></h1></div>
+              <p class="title">Secretario general de la ONU</p>
+              <p>Compañero de trabajo</p>
+              <p><button>+502 5610-9084</button></p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 bottom-buttons">
+            <button class="btn-lrg submit-btn" onclick="save()">GUARDAR</button>
+            <button class="btn-lrg submit-btn" onclick="save()">VOLVER</button>
+          </div>
+
+        </div>
+      
+      `
+    }
+
+  </script>
+
+
     
-    
+  
 
 
 
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- BOOTSTRAP --> 
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP --> 
 </body>
 </html>

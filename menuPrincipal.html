@@ -24,189 +24,106 @@
     <script>
       const username = localStorage.getItem("username");
 
-      function redirect(){
-        window.location.href = '/newContact.html'
+      function redirect() {
+        window.location.href = '/newContact.html';
       }
 
-      const favoritesContacts = ()=>{
-        window.location.href = '/favorites.html'
+      const favoritesContacts = () => {
+        window.location.href = '/favorites.html';
+      };
+
+      const viewProfile = ()=>{
+        window.location.href = '/profile.html'
       }
 
-      const redirectDetails = ()=>{
-        window.Location.href = '/detailsContact.html'
-      }
 
+      // Generar contenido dinámico
       if (username) {
-        document.body.innerHTML = `    
-                <div class="TheDiv">
-                    <div class="divTitle">
-                        <h1><b>¡Bienvenido ${username}!</b></h1>
-                        
-                        <button type="button" class="btn btn-primary new-contact-button" onclick='redirect()'>
-                          <img class='plus-button' src='/images/plus.png' alt='Nuevo contacto'/>  
-                        </button>
+        document.body.innerHTML = `
+          <div class="TheDiv">
+            <div class="divTitle">
+              <h1><b>¡Bienvenido ${username}!</b></h1>
 
-                        <div class="underline-title"></div>
+              <button type="button" class="btn btn-primary new-contact-button" onclick="redirect()">
+                <img class='plus-button' src='/images/plus.png' alt='Nuevo contacto'/>  
+              </button>
+            
+              <div id="contact-1" class='porfile-container'>
+                <img src="images/img_avatar.png" alt="Profile Man" />
+                <h2><b>Antonio Perez</b></h2>
+                <p><b>Teléfono:</b></p>
+                <h5>+502 4409-9432</h5>
+                <button type="button" class="btn btn-primary contact-button" data-id="contact-1"><b>Detalles</b></button>
+              </div>
+            
+              <div id="contact-2" class='porfile-container'>
+                <img src="images/img_avatar.png" alt="Profile Man" />
+                <h2><b>Ceferino Rodriguez</b></h2>
+                <p><b>Teléfono:</b></p>
+                <h5>+502 4409-9432</h5>
+                <button type="button" class="btn btn-primary contact-button" data-id="contact-2"><b>Detalles</b></button>
+              </div>
+            
+              <div id="contact-3" class='porfile-container'>
+                <img src="images/img_avatar.png" alt="Profile Man" />
+                <h2><b>Alexander Mayen</b></h2>
+                <p><b>Teléfono:</b></p>
+                <h5>+502 4409-9432</h5>
+                <button type="button" class="btn btn-primary contact-button" data-id="contact-3"><b>Detalles</b></button>
+              </div>
 
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Antonio Perez</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
+              <div id="contact-4" class='porfile-container'>
+                <img src="images/img_avatar.png" alt="Profile Man" />
+                <h2><b>Cesar Palacios</b></h2>
+                <p><b>Teléfono:</b></p>
+                <h5>+502 4409-9432</h5>
+                <button type="button" class="btn btn-primary contact-button" data-id="contact-4"><b>Detalles</b></button>
+              </div>
 
-                        <button type="button" class="btn btn-primary" onclick='redirectDetails()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-                        
-                        <!- Contacto 2 -->
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Ceferino Rodriguez</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-
-                        <!- Contacto 3 -->
-                            <div class='porfile-container'>
-                                <img src="images/img_avatar.png" alt="Porfile Man" />
-                                <h2><b>Alexander Mayen</b></h2>
-                                <div class="line-contact"></div>
-                                <p><b>Teléfono:</b></p>
-                                <h5>+502 4409-9432</h5>
-                            </div>
-
-                            <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                            <div class="underline-contact"></div>
-
-                        <!- Contacto 4 -->
-                        
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Cesar Palacios</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-                        <!- Contacto 5 -->
-
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Alex Syntek</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                    </div>
-
-                    
-                </div>`;
+              <div id="contact-5" class='porfile-container'>
+                <img src="images/img_avatar.png" alt="Profile Man" />
+                <h2><b>Ludvin Cortez</b></h2>
+                <p><b>Teléfono:</b></p>
+                <h5>+502 4409-9432</h5>
+                <button type="button" class="btn btn-primary contact-button" data-id="contact-5"><b>Detalles</b></button>
+              </div>
+            </div>
+          </div>`;
       } else {
-        document.body.innerHTML = `    
-                <div class="TheDiv">
-                    <div class="divTitle">
-                        <h1><b>¡Bienvenido!</b></h1>
-                        
-                        <button type="button" class="btn btn-primary new-contact-button">
-                          <img class='plus-button' src='/images/plus.png' alt='Nuevo contacto'/>  
-                        </button>
-
-                        <div class="underline-title"></div>
-
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Antonio Perez</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-                        
-                        <!- Contacto 2 -->
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Ceferino Rodriguez</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-
-                        <!- Contacto 3 -->
-                            <div class='porfile-container'>
-                                <img src="images/img_avatar.png" alt="Porfile Man" />
-                                <h2><b>Alexander Mayen</b></h2>
-                                <div class="line-contact"></div>
-                                <p><b>Teléfono:</b></p>
-                                <h5>+502 4409-9432</h5>
-                            </div>
-
-                            <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                            <div class="underline-contact"></div>
-
-                        <!- Contacto 4 -->
-                        
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Cesar Palacios</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primary" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                        <div class="underline-contact"></div>
-
-                        <!- Contacto 5 -->
-
-                        <div class='porfile-container'>
-                            <img src="images/img_avatar.png" alt="Porfile Man" />
-                            <h2><b>Alex Syntek</b></h2>
-                            <div class="line-contact"></div>
-                            <p><b>Teléfono:</b></p>
-                            <h5>+502 4409-9432</h5>
-                        </div>
-
-                        <button type="button" class="btn btn-primar" onclick='favoritesContacts()'><b>Detalles</b></button>
-
-                    </div>
-
-                    
-                </div>`;
+        document.body.innerHTML = `<h1>¡Por favor inicia sesión!</h1>`;
       }
+
+     /* function viewProfile(){
+        const username = localStorage.getItem("username"); // Obtiene el username desde localStorage
+        if (username) {
+          window.location.href = '/profile.html';
+        } else {
+          console.error("No username found in localStorage");
+        }
+      }*/
+
+      // Manejo de eventos después de la generación del contenido
+      document.addEventListener("click", (event) => {
+        if (event.target.classList.contains("contact-button")) {
+          const contactId = event.target.getAttribute("data-id");
+          const contactElement = document.getElementById(contactId);
+        
+          if (contactElement) {
+            const contactName = contactElement.querySelector("h2").innerText;
+            console.log("Contact Name:", contactName); // Depuración
+            localStorage.setItem("contactName", contactName);
+            window.location.href = "/detailsContact.html";
+          } else {
+            console.error("Contact element not found!"); // Error en consola
+          }
+        }
+      });
     </script>
 
     <div class="porfile-container">
       <img class="profile-icon" src="https://cdn-icons-png.flaticon.com/512/2919/2919906.png" alt="User image" />
       <div class="profile-div">
-        <p class="h1"><button type="button" class="btn btn-light profile-button"><h3><b>Ver Perfil</b></h3></button></p>
+        <p class="h1"><button type="button" class="btn btn-light profile-button" onclick="viewProfile()"><h3><b>Ver Perfil</b></h3></button></p>
       </div>
 
       <button type="button" class="btn btn-primary favorites-button" onclick='favoritesContacts()'>
