@@ -120,6 +120,14 @@ button{
   border-radius:25% !important; 
 }
 
+.toDo-button{
+  top: -30px;
+  right: -5px;
+  width: 150px;
+  height: 150px;
+  border-radius:25% !important; 
+}
+
 .plus-button{
   width:2cm;
   height: 2cm;

@@ -30,7 +30,12 @@
 
       const favoritesContacts = () => {
         window.location.href = '/favorites.html';
-      };
+      }
+
+      const toDo = () => {
+        window.location.href = '/toDo.html';
+      }
+
 
       const viewProfile = ()=>{
         window.location.href = '/profile.html'
@@ -93,14 +98,7 @@
         document.body.innerHTML = `<h1>¡Por favor inicia sesión!</h1>`;
       }
 
-     /* function viewProfile(){
-        const username = localStorage.getItem("username"); // Obtiene el username desde localStorage
-        if (username) {
-          window.location.href = '/profile.html';
-        } else {
-          console.error("No username found in localStorage");
-        }
-      }*/
+
 
       // Manejo de eventos después de la generación del contenido
       document.addEventListener("click", (event) => {
@@ -129,7 +127,9 @@
       <button type="button" class="btn btn-primary favorites-button" onclick='favoritesContacts()'>
         <img class='plus-button' src='/images/star.png' alt='Nuevo contacto'/>  
       </button>
-      
+      <button type="button" class="btn-primary toDo-button" onclick='toDo()'>
+        <img class='plus-button' src='images/toDoIcon.png' alt='Nuevo contacto'/>  
+      </button>
     </div>
 
 
